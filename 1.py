@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 def main():
-    string = str(input("Введите любую строку: "))
+    user_input = str(input("Введите любую строку: ")).lower()
+    set_of_vowels = set('ауоыэяюёие')
+    vowels_count = sum(1 for char in user_input if char in set_of_vowels)
 
-    vowels_count = sum(1 for char in string if char.lower() in 'ауоыэяюёие')
     return f"Количество гласных: {vowels_count}"
 
 
